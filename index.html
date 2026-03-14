@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Enes Yakan | Portfolio</title>
+    <meta name="description" content="Portfolio of Muhammed Enes Yakan - Computer Engineer">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+        <div class="container header-content">
+            <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <a href="#about" class="nav-link" data-key="nav_about">Hakkımda</a>
+                <a href="#education" class="nav-link" data-key="nav_edu">Eğitim</a>
+                <a href="#experience" class="nav-link" data-key="nav_exp">Deneyim</a>
+                <a href="#skills" class="nav-link" data-key="nav_skills">Yetenekler</a>
+                <a href="#references" class="nav-link" data-key="nav_ref">Referanslar</a>
+            </nav>
+            <div class="controls">
+                <div class="lang-switch">
+                    <button id="btn-tr" class="active">TR</button>
+                    <button id="btn-en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="about" class="hero glass-panel fade-in">
+            <h1 data-key="name">MUHAMMED ENES YAKAN</h1>
+            <div class="contact-info">
+                <span class="info-item"><i class="fa-solid fa-location-dot"></i> <span data-key="location">Ankara, Türkiye</span></span>
+                <a href="mailto:yakanbusiness@gmail.com" class="info-item hover-link"><i class="fa-solid fa-envelope"></i> yakanbusiness@gmail.com</a>
+            </div>
+            <p class="summary" data-key="summary">Yapay zeka, makine öğrenmesi, oyun geliştirme ve gömülü sistemler alanlarında projeler geliştirmiş takım çalışmasına yatkın, araştırmacı ve yeni teknolojileri hızla öğrenip uygulayabilen bir bilgisayar mühendisi.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="fade-in section-block">
+            <h2 class="section-title" data-key="education_title">EĞİTİM</h2>
+            <div class="timeline glass-panel">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-key="edu_uni">Kırıkkale Üniversitesi | Bilgisayar Mühendisliği (Mezun)</h3>
+                        <div class="meta">
+                            <span class="date">2021-2025</span>
+                            <span class="badge" data-key="edu_gpa">AGNO : 2,96</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="fade-in section-block">
+            <h2 class="section-title" data-key="experience_title">DENEYİM</h2>
+            <div class="cards-grid">
+                
+                <div class="card glass-panel interactive">
+                    <div class="card-header">
+                        <h3 data-key="exp_lodos_title">Oyun Geliştirme | Lodos Games</h3>
+                    </div>
+                    <h4 class="role subtitle" data-key="exp_lodos_role">Slot Oyunu</h4>
+                    <ul class="bullet-list">
+                        <li data-key="exp_lodos_desc">Casino Simulator projesindeki slot oyununun frontend ve backend geliştirmesini tamamen üstlendim; oyuncuların daha eğlenceli vakit geçirmesini sağlamak amacıyla oyun döngüsü ve kullanıcı deneyimini optimize ettim; sonuç olarak modül, oyunun en çok oynanan parçası oldu.</li>
+                    </ul>
+                    
+                    <div class="project-gallery community-gallery mt-3">
+                        <h4 class="text-center subtitle" data-key="community_title" style="margin-bottom: 1rem; color: var(--text-secondary);">Topluluk Görselleri</h4>
+                        
+                        <div class="carousel-container">
+                            <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <div class="carousel-track-wrapper">
+                                <div class="carousel-track" id="carousel-track">
+                                    <div class="carousel-item">
+                                        <a href="https://store.steampowered.com/app/2898270/Casino_Simulator/" target="_blank" class="gallery-link">
+                                            <img src="assets/img/main.jpg" alt="Casino Simulator Official" class="comm-img">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3567537263" target="_blank" class="gallery-link">
+                                            <img src="assets/img/comm1.jpg" alt="Community Image 1" class="comm-img">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3254528733" target="_blank" class="gallery-link">
+                                            <img src="assets/img/comm2.jpg" alt="Community Image 2" class="comm-img">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3309224255" target="_blank" class="gallery-link">
+                                            <img src="assets/img/comm3.jpg" alt="Community Image 3" class="comm-img">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3266422937" target="_blank" class="gallery-link">
+                                            <img src="assets/img/comm4.jpg" alt="Community Image 4" class="comm-img">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3256722287" target="_blank" class="gallery-link">
+                                            <img src="assets/img/comm5.jpg" alt="Community Image 5" class="comm-img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links mt-3 text-center">
+                        <a href="https://store.steampowered.com/app/2898270/Casino_Simulator/" target="_blank" class="steam-btn">
+                            <i class="fa-brands fa-steam"></i> <span data-key="steam_btn_text">Steam'de İncele</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card glass-panel interactive">
+                    <div class="card-header">
+                        <h3 data-key="exp_ai_title">Yapay Zeka Modeli | Kişisel Proje</h3>
+                    </div>
+                    <h4 class="role subtitle" data-key="exp_ai_role">Müzik Akor Tespiti İçin Yapay Zeka Modeli</h4>
+                    <ul class="bullet-list">
+                        <li data-key="exp_ai_desc">İnternetten etiketli veri toplayarak NAS tekniğiyle bir yapay zeka modeli geliştirdim; müziklerden akor/nota tespitini gerçekleştirmek amacıyla çalıştım; %96 doğruluk oranına ulaştım ve STT entegrasyonu için arayüz planlaması yaptım.</li>
+                    </ul>
+                </div>
+
+                <div class="card glass-panel interactive">
+                    <div class="card-header">
+                        <h3 data-key="exp_auto_title">Otomasyon | Kişisel Proje</h3>
+                    </div>
+                    <h4 class="role subtitle" data-key="exp_auto_role">ROI Tabanlı Ekran Yakalama ile Satın Alma Otomasyonu</h4>
+                    <ul class="bullet-list">
+                        <li data-key="exp_auto_desc">Çevrimiçi platformlarda satın alma sürecini otomatikleştirmek için ROI tabanlı ekran yakalama ve OCR kullanan bir sistem geliştirdim; fiyatların eşik değerin altına düşmesini takip ederek çoklu ürün satın almayı hızlandırmak amacıyla çalıştım; otomatik satın alma akışı kurdum ve gelecekte %100 doğruluk için hook sistemi planladım.</li>
+                    </ul>
+                </div>
+
+                <div class="card glass-panel interactive">
+                    <div class="card-header">
+                        <h3 data-key="exp_hw_title">Donanım | Teknofest Projesi</h3>
+                    </div>
+                    <h4 class="role subtitle" data-key="exp_hw_role">Joystick Tasarımı</h4>
+                    <ul class="bullet-list">
+                        <li data-key="exp_hw_desc">STM32 mikrodenetleyicisiyle joystick verilerini düşük gürültüyle aktaran bir kontrolcü geliştirdim; dron ve araçların daha hassas kontrolünü sağlamak amacıyla tasarladım; sonuç olarak daha kontrollü hareketler elde ettim.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-in section-block">
+            <h2 class="section-title" data-key="skills_title">YETENEKLER</h2>
+            <div class="skills-container glass-panel">
+                <div class="skill-group">
+                    <h4 data-key="skill_prog">Programlama Dilleri</h4>
+                    <div class="tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 data-key="skill_ai">Yapay Zeka / ML</h4>
+                    <div class="tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">OCR (EasyOCR)</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 data-key="skill_game">Oyun & Gömülü Sistemler</h4>
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">STM32</span>
+                        <span class="tag">STMStudio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="fade-in section-block">
+            <h2 class="section-title" data-key="ref_title">REFERANSLAR</h2>
+            <div class="references-grid">
+                <div class="ref-card glass-panel interactive">
+                    <h3 class="ref-company">LODOS GAMES</h3>
+                    <p class="ref-name"><span data-key="ref_founder">Kurucu</span>: Rıfat Türkan</p>
+                </div>
+                <div class="ref-card glass-panel interactive">
+                    <h3 class="ref-company">AHİ YAZILIM</h3>
+                    <p class="ref-name"><span data-key="ref_founder">Kurucu</span>: Tayfun Sarıkaya</p>
+                </div>
+                <div class="ref-card glass-panel interactive">
+                    <h3 class="ref-company" data-key="ref_uni">KIRIKKALE ÜNİVERSİTESİ</h3>
+                    <p class="ref-name">Doç. Dr. Erdal ERDAL</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Muhammed Enes Yakan. <span data-key="footer_rights">Tüm hakları saklıdır.</span></p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
