@@ -213,8 +213,10 @@ function updateCarouselPosition(animate = true) {
 }
 
 // Ensure proper alignment on load and resize
+let carouselResizeTimer;
 window.addEventListener('resize', () => {
-    updateCarouselPosition(false);
+    clearTimeout(carouselResizeTimer);
+    carouselResizeTimer = setTimeout(() => updateCarouselPosition(false), 150);
 });
 
 // Next Slide
@@ -259,16 +261,18 @@ updateCarouselPosition(false);
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 const chars = '01';
 const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = [];
+let columns, drops;
 
-for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
+function initMatrix() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = [];
+    for (let x = 0; x < columns; x++) {
+        drops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
+    }
 }
 
 function drawMatrix() {
@@ -291,9 +295,11 @@ function drawMatrix() {
     }
 }
 
+initMatrix();
 setInterval(drawMatrix, 50);
 
+let matrixResizeTimer;
 window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    clearTimeout(matrixResizeTimer);
+    matrixResizeTimer = setTimeout(() => initMatrix(), 150);
 });
